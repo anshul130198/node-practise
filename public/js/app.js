@@ -1,7 +1,8 @@
 console.log('client side javscript file loaded!!');
 
+// http://localhost:3000/weather?address=${loc}`
 function weatherDataFinder(loc) {
-    fetch(`http://localhost:3000/weather?address=${loc}`).then((response) => {
+    fetch(`/weather?address=${loc}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error);
